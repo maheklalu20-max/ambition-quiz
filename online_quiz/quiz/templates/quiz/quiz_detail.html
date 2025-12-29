@@ -1,0 +1,86 @@
+{% extends 'quiz/base.html' %}
+{% block title %}{{ quiz.title }}{% endblock %}
+
+{% block content %}
+<div class="alert alert-warning text-center">
+    ⏱ Time Remaining: <span id="timer">02:00</span>
+</div>
+
+<h2>{{ quiz.title }}</h2>
+
+<form method="post" id="quizForm">
+  {% csrf_token %}
+
+  {% for question in questions %}
+    <div class="mb-3">
+      <p><b>{{ forloop.counter }}. {{ question.question_text }}</b></p>
+
+      <div class="form-check">
+  <input class="form-check-input"
+         type="radio"
+         name="question_{{ question.id }}"
+         value="{{ question.option1 }}"
+         required>
+  <label class="form-check-label">{{ question.option1 }}</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input"
+         type="radio"
+         name="question_{{ question.id }}"
+         value="{{ question.option2 }}">
+  <label class="form-check-label">{{ question.option2 }}</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input"
+         type="radio"
+         name="question_{{ question.id }}"
+         value="{{ question.option3 }}">
+  <label class="form-check-label">{{ question.option3 }}</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input"
+         type="radio"
+         name="question_{{ question.id }}"
+         value="{{ question.option4 }}">
+  <label class="form-check-label">{{ question.option4 }}</label>
+</div>
+
+  {% endfor %}
+
+  <button type="submit" class="btn btn-primary">Submit Quiz</button>
+</form>
+<script>
+    let timeLeft = 120; // 2 minutes
+    const timerElement = document.getElementById("timer");
+
+    function startTimer() {
+        const interval = setInterval(() => {
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+
+            timerElement.textContent =
+                String(minutes).padStart(2, '0') + ":" +
+                String(seconds).padStart(2, '0');
+
+            if (timeLeft <= 10) {
+                timerElement.style.color = "red";
+            }
+
+            timeLeft--;
+
+            if (timeLeft < 0) {
+                clearInterval(interval);
+                alert("Time is up! Quiz will be submitted.");
+                document.getElementById("quizForm").submit();
+            }
+        }, 1000);
+    }
+
+    startTimer();
+</script>
+
+
+{% endblock %}

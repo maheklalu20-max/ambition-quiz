@@ -1,0 +1,113 @@
+{% extends 'quiz/base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<div class="container text-center hero">
+    <h1 class="fw-bold mb-3">Welcome to Ambition Quiz</h1>
+    <p class="text-muted mb-4">
+        Test your knowledge, track your progress, and earn certificates.
+    </p>
+    <a href="{% url 'quiz_list' %}" class="btn btn-primary btn-lg">
+        View Quizzes
+    </a>
+</div>
+
+<!-- FEATURES SECTION -->
+<div class="container mt-5">
+    <h2 class="text-center fw-bold mb-4"><i>What We Offer</i></h2> 
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 text-center p-3">
+                <h5 class="fw-bold">🧠 Skill-Based Quizzes</h5>
+                <p class="text-muted">
+                    Practice quizzes based on core concepts and real interview topics.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 text-center p-3">
+                <h5 class="fw-bold">⏱ Timed Assessments</h5>
+                <p class="text-muted">
+                    Each quiz is time-bound to improve speed and accuracy.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 text-center p-3">
+                <h5 class="fw-bold">📊 Performance Tracking</h5>
+                <p class="text-muted">
+                    View your quiz history, scores, and total attempts on the dashboard.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="container mt-5">
+    <h2 class="text-center fw-bold mb-4"><i>How It Works</i></h2>
+
+    <div class="row g-4">
+        <div class="col-md-3 text-center">
+            <div class="card p-3 h-100">
+                <h5 class="fw-bold"><i>Step 1:</i> Login</h5>
+                <p class="text-muted">
+                    Login securely to access quizzes and track progress.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+            <div class="card p-3 h-100">
+                <h5 class="fw-bold"><i>Step 2:</i> Attempt Quiz</h5>
+                <p class="text-muted">
+                    Select a quiz and answer questions within the given time.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+            <div class="card p-3 h-100">
+                <h5 class="fw-bold"><i>Step 3:</i> Get Result</h5>
+                <p class="text-muted">
+                    Instant score calculation with pass/fail status.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+            <div class="card p-3 h-100">
+                <h5 class="fw-bold"><i>Step 4:</i> Track Progress</h5>
+                <p class="text-muted">
+                    Dashboard shows your quiz history and performance.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CERTIFICATE SECTION -->
+<div class="container mt-5 mb-5">
+    <h2 class="text-center fw-bold mb-4"><i>Certification & Grading</i></h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card p-4">
+                <ul class="mb-0">
+                    <li>✔ Each quiz is evaluated automatically.</li>
+                    <li>✔ Minimum <strong>50%</strong> score required to pass.</li>
+                    <li>✔ Successful candidates can download a certificate.</li>
+                    <li>✔ Certificates include user name, quiz title, and score.</li>
+                    <li>✔ Certificates are generated in PDF format.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

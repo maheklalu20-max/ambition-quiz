@@ -1,0 +1,34 @@
+{% extends 'quiz/base.html' %}
+{% block title %}Result{% endblock %}
+
+{% block content %}
+<div class="text-center">
+
+    <h2>{{ quiz.title }} - Result</h2>
+
+    <div class="alert alert-info mt-3">
+        <h4>Your Score: {{ score }} / {{ total }}</h4>
+        <p>Percentage: {{ percentage|floatformat:2 }}%</p>
+    </div>
+
+    {% if passed %}
+        <div class="alert alert-success">
+            🎉 Congratulations! You passed the quiz.
+        </div>
+
+        <a href="{% url 'certificate' quiz.id %}" class="btn btn-success mt-3">
+            🎓 Download Certificate
+        </a>
+    {% else %}
+        <div class="alert alert-danger">
+            ❌ You did not pass. Minimum 50% required.
+        </div>
+    {% endif %}
+
+    <br><br>
+    <a href="{% url 'quiz_list' %}" class="btn btn-primary">
+        Back to Quizzes
+    </a>
+
+</div>
+{% endblock %}
