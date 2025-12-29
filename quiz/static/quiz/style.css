@@ -1,0 +1,209 @@
+/* =========================
+   GLOBAL
+========================= */
+body {
+    background-color: #f1fdf6; /* light green background */
+    color: #212529;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* =========================
+   NAVBAR (structure only – color later)
+========================= */
+.navbar {
+    background: linear-gradient(90deg, #30ed95, #286e59);
+}
+
+.navbar .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.navbar .nav-link:hover {
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================
+   CARDS
+========================= */
+.card {
+    border-radius: 14px;
+    border: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+/* Quiz cards hover effect */
+.quiz-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+/* Primary = Education Green */
+.btn-primary {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-primary:hover {
+    background-color: #157347;
+    border-color: #157347;
+}
+
+/* Success buttons */
+.btn-success {
+    background-color: #20c997;
+    border-color: #20c997;
+}
+
+.btn-success:hover {
+    background-color: #17a589;
+    border-color: #17a589;
+}
+
+/* =========================
+   FORMS (Login / Quiz)
+========================= */
+.form-control {
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.form-control:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+.dashboard-box {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   QUIZ TIMER
+========================= */
+.alert-warning {
+    background-color: #e6fff3;
+    color: #146c43;
+    border: 1px solid #b7f5d8;
+    font-weight: 500;
+}
+
+/* =========================
+   TABLES
+========================= */
+.table {
+    background-color: white;
+}
+
+.table thead {
+    background-color: #198754;
+    color: white;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+    color: #198754;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #145c3a;
+    text-decoration: underline;
+}
+/* =========================
+   LOGO
+========================= */
+.logo-icon {
+    font-size: 1.6rem;
+}
+
+.logo-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+/* =========================
+   MULTICOLOR LOGO
+========================= */
+.logo-icon {
+    font-size: 1.6rem;
+}
+
+.logo-edu {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #e6e613; /* green */
+    letter-spacing: 0.5px;
+}
+
+.logo-quiz {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #3e89ab; /* blue */
+    letter-spacing: 0.5px;
+}
+.hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+/* LOGOUT BUTTON - STAND OUT */
+.btn-logout {
+    background: linear-gradient(135deg, #c61212, #7d4cbd);
+    color: white !important;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background: linear-gradient(135deg, #9656c4, #cc0000);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+/* Signup button styling */
+.btn-signup {
+    background: linear-gradient(135deg, #0dcaf0, #3e89ab);
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 6px 16px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-signup:hover {
+    background: linear-gradient(135deg, #0bb2d6, #286e59);
+    color: #ffffff !important;
+    transform: scale(1.05);
+}
+
